@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.register-container {
+    color: white;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* Space Themed Form Box */
+.form-box {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+    width: 400px;
+    text-align: center;
+}
+
+/* Title */
+.title {
+    font-size: 2.5em;
+    text-shadow: 0 0 15px cyan, 0 0 25px blue;
+}
+
+/* Input Fields */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+.neon-button {
+    background: linear-gradient(45deg, #00f7ff, #004cff);
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px; /* Adjust this value as needed */
+}
+
+.neon-button:hover {
+    background: linear-gradient(45deg, #004cff, #00f7ff);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+    transform: scale(1.05);
+}
+
+/* File Upload Button */
+/* Add to RegisterPage.css */
+.u/* Updated unique cosmic upload button */
+.upload-container {
+  width: 100%;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.upload-button {
+  display: block;
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(16, 24, 57, 0.4);
+  border: 1px solid #4a9eda;
+  color: #a6d9ff;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 16px;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  text-shadow: 0 0 8px rgba(74, 158, 218, 0.5);
+}
+
+.upload-button:hover {
+  background: rgba(26, 34, 67, 0.6);
+  transform: translateY(-1px);
+  box-shadow: 0 0 15px rgba(74, 158, 218, 0.4);
+}
+
+.upload-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(74, 158, 218, 0.2),
+    transparent
+  );
+  transform: rotate(45deg);
+  transition: all 0.5s ease;
+}
+
+.upload-button:hover::before {
+  animation: cosmic-shine 1.5s infinite;
+}
+
+@keyframes cosmic-shine {
+  0% { left: -50%; }
+  100% { left: 150%; }
+}
+
+.upload-button::after {
+  content: '📷';
+  margin-left: 8px;
+  filter: drop-shadow(0 0 4px rgba(74, 158, 218, 0.8));
+}
+
+.file-input {
+  display: none;
+}
+
+/* Selected file styling */
+.upload-button:has(.file-input:not(:placeholder-shown)) {
+  border-color: #6ae8ff;
+  background: rgba(24, 44, 82, 0.6);
+}
+
+/* Add constellation animation to container */
+@keyframes constellation-pulse {
+  0% { opacity: 0.4; }
+  50% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+.upload-container:hover {
+  animation: constellation-pulse 2s infinite;
+}

@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+.space-container {
+    color: white;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Background Overlay for Contrast */
+.space-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* ========================== */
+/* Find They? Title (Glowing 3D Effect) */
+/* ========================== */
+.title {
+    font-size: 4.5em;
+    font-weight: bold;
+    position: relative;
+    z-index: 2;
+    text-shadow: 0 0 10px cyan, 0 0 20px blue, 0 0 40px rgba(0, 255, 255, 0.8);
+}
+
+/* ========================== */
+/* VARUNA (Unique & Bigger) */
+/* ========================== */
+.varuna {
+    font-size: 7em;
+    font-weight: bold;
+    letter-spacing: 5px;
+    background: linear-gradient(90deg, cyan, blue, purple);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 50px rgba(0, 255, 255, 0.9);
+    animation: glowEffect 2s infinite alternate;
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes glowEffect {
+    from { text-shadow: 0 0 20px cyan; }
+    to { text-shadow: 0 0 40px blue; }
+}
+
+/* ========================== */
+/* Description (More Readable) */
+/* ========================== */
+.description {
+    font-size: 1.4em;
+    max-width: 800px;
+    margin: 20px auto;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+    padding: 15px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+}
+
+/* ========================== */
+/* Glowing 3D Button */
+/* ========================== */
+.neon-button {
+    background: linear-gradient(45deg, #00f7ff, #004cff);
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.3em;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    border: 2px solid rgba(0, 247, 255, 0.5);
+    box-shadow: 0 0 15px rgba(0, 247, 255, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+/* Hover Effect */
+.neon-button:hover {
+    background: linear-gradient(45deg, #004cff, #00f7ff);
+    box-shadow: 0 0 35px rgba(0, 255, 255, 0.6);
+    transform: scale(1.1);
+}
+
+/* ============================= */
+/* Image Button Styling */
+/* ============================= */
+/* Image Button */
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+    z-index: 5; /* Ensure button is clickable */
+}
+
+.image-button {
+    width: 120px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    animation: float 2s infinite alternate ease-in-out;
+}
+
+/* Floating Effect */
+@keyframes float {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
+
+/* Hover Effect */
+.image-button:hover {
+    transform: scale(1.1);
+}
+
+/* Popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.95);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px cyan;
+    text-align: center;
+    z-index: 100;
+    width: 350px;
+}
+
+/* Popup Text */
+.popup-content {
+    color: white;
+    font-size: 1.3em;
+}
+
+/* Close Button */
+.close-button {
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    margin-top: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* Close Button Hover */
+.close-button:hover {
+    background: darkred;
+}
